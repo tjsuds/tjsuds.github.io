@@ -65,7 +65,7 @@ p {
   text-align: justify;
 }
 
-*, *::after, *::before {
+*::after, *::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -178,6 +178,9 @@ header {
 .cd-nav-trigger {
   position: fixed;
   display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .cd-nav-trigger {
@@ -190,6 +193,9 @@ header {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 920px) {
@@ -232,6 +238,9 @@ header {
   height: 3px;
   background-color: #ffffff;
   z-index: 10;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .cd-nav-trigger .cd-icon::before, .cd-nav-trigger .cd-icon:after {
   /* upper and lower lines of the menu icon */
@@ -253,6 +262,9 @@ header {
   -webkit-transition: -webkit-transform .3s;
   -moz-transition: -moz-transform .3s;
   transition: transform .3s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .cd-nav-trigger .cd-icon::before {
   -webkit-transform: translateY(-6px) rotate(0deg);
@@ -260,6 +272,9 @@ header {
   -ms-transform: translateY(-6px) rotate(0deg);
   -o-transform: translateY(-6px) rotate(0deg);
   transform: translateY(-6px) rotate(0deg);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .cd-nav-trigger .cd-icon::after {
   -webkit-transform: translateY(6px) rotate(0deg);
@@ -267,6 +282,9 @@ header {
   -ms-transform: translateY(6px) rotate(0deg);
   -o-transform: translateY(6px) rotate(0deg);
   transform: translateY(6px) rotate(0deg);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .cd-nav-trigger::before, .cd-nav-trigger::after {
   /* 2 rounded colored backgrounds for the menu icon */
@@ -287,6 +305,7 @@ header {
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   transition-property: transform;
+
 }
 .cd-nav-trigger::before {
   background-color: black;
@@ -341,9 +360,15 @@ header {
 .cd-nav-trigger.close-nav .cd-icon {
   /* user clicks on the .cd-nav-trigger element - transform the icon */
   background-color: rgba(255, 255, 255, 0);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .cd-nav-trigger.close-nav .cd-icon::before, .cd-nav-trigger.close-nav .cd-icon::after {
   background-color: black;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .cd-nav-trigger.close-nav .cd-icon::before {
   -webkit-transform: translateY(0) rotate(45deg);
@@ -351,6 +376,9 @@ header {
   -ms-transform: translateY(0) rotate(45deg);
   -o-transform: translateY(0) rotate(45deg);
   transform: translateY(0) rotate(45deg);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .cd-nav-trigger.close-nav .cd-icon::after {
   -webkit-transform: translateY(0) rotate(-45deg);
@@ -358,6 +386,9 @@ header {
   -ms-transform: translateY(0) rotate(-45deg);
   -o-transform: translateY(0) rotate(-45deg);
   transform: translateY(0) rotate(-45deg);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .cd-primary-nav {
@@ -372,17 +403,23 @@ header {
   background-color: black;
   overflow: auto;
   /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
-  -webkit-overflow-scrolling: touch;
+  /*-webkit-overflow-scrolling: touch;*/
   visibility: hidden;
   opacity: 0;
   -webkit-transition: visibility 0s, opacity 0.3s;
   -moz-transition: visibility 0s, opacity 0.3s;
   transition: visibility 0s, opacity 0.3s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .cd-primary-nav li {
   margin: 2em 0;
   text-align: center;
   text-transform: uppercase;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .cd-primary-nav a {
   font-size: 20px;
@@ -392,14 +429,25 @@ header {
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   transition: color 0.2s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .no-touch .cd-primary-nav a:hover {
   color: white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .cd-primary-nav.fade-in {
   /* navigation visible at the end of the circle animation */
   visibility: visible;
   opacity: 1;
+  /*transferred this scrolling fix to the fade-in because it was affecting mobile browser scrolling in landscape mode*/
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @media only screen and (min-width: 768px) {
@@ -434,6 +482,9 @@ header {
   -ms-transform: translateX(-20px) translateY(20px);
   -o-transform: translateX(-20px) translateY(20px);
   transform: translateX(-20px) translateY(20px);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .cd-overlay-nav span, .cd-overlay-content span {
   display: inline-block;
@@ -458,6 +509,9 @@ header {
   -ms-transform: scale(0);
   -o-transform: scale(0);
   transform: scale(0);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .cd-overlay-nav.is-hidden, .cd-overlay-content.is-hidden {
   /* background fades out at the end of the animation */
@@ -466,22 +520,37 @@ header {
   -webkit-transition: opacity .3s 0s, visibility 0s .3s;
   -moz-transition: opacity .3s 0s, visibility 0s .3s;
   transition: opacity .3s 0s, visibility 0s .3s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .cd-overlay-nav {
   /* main rounded colored bg 1 */
   z-index: 2;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .cd-overlay-nav span {
   background-color: black;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .cd-overlay-content {
   /* main rounded colored bg 2 */
   z-index: 4;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .cd-overlay-content span {
   background-color: white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*current link colors -----------change colors eventually!*/
@@ -916,6 +985,8 @@ header {
 }
 
 .playlist-1, .playlist-2 {
+  box-sizing: content-box;
+  content: normal;
   width: 46%;
   display: inline-block;
   float: left;
@@ -968,6 +1039,8 @@ header {
 }
 
 .scroll {
+  box-sizing: content-box;
+  content: normal;
   width: 100%;
   height: auto;
   background: rgba(60,63,66,.000001);
@@ -991,6 +1064,8 @@ header {
 }
 
 .scroll img {
+  box-sizing: content-box;
+  content: normal;
   width: 90%;
   margin: 0 auto;
   display: block;
@@ -1033,8 +1108,14 @@ header {
     transform: scale(1.2);
 }
 /*----------------------------------LEARNING CONTENT----------------------------------*/
-.m-profile {
-  background-color: red;
+.m-posts {
+  width: 60%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1000px) {
+  .m-posts {
+    width: 100%;
+  }
 }
 
 /*
